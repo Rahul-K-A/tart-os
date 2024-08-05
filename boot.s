@@ -22,7 +22,7 @@ end:
 kernel_entry:
     @ Move the stack pointer to mem loc 80000
     @ Stack pointer grows downwards (decrements) with each addition to the stack
-    mov sp, #80000
+    mov sp, #0x80000
     @ Store the location of line 28 (which calls the end function)in the Link register 
     @ and begin executing the actual kernel
     bl KMain
