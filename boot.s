@@ -2,6 +2,9 @@
 // .text indicates that the section contains executable code 
 .section .text
 
+// Make start accessible from outside the file (for linking)
+.global start
+
 start:
     // Kind of fuzzy for now, but check if the code is being executed
     // by the RPi's main core, and allow kernel entry only for that core
