@@ -10,7 +10,7 @@ aarch64-linux-gnu-gcc -std=c99 -ffreestanding -mgeneral-regs-only -c main.c
 # Name of the output linked object-> kernel
 # Things to link boot.o, main.o
 # Boot section always has to be linked first so that it is first in memory
-aarch64-linux-gnu-ld -nostdlib -T link.lds -o kernel boot.o main.only
+aarch64-linux-gnu-ld -nostdlib -T link.lds -o kernel boot.o main.o
 
 # Convert binary object to .img format
 aarch64-linux-gnu-objcopy -O binary kernel kernel8.img
